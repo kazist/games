@@ -1,0 +1,39 @@
+{# empty Twig template #}
+
+<h1 class="component-header">Top Player </h1>
+
+<div class="game-list">
+    <div class="table-responsive">
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Game</th>
+                    <th>Hit</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if items|length > 0 %}
+                    {% for item in items %}
+                        <tr>
+                            <td>{{ item.user_id_name }}</td>
+                            <td>
+                                <a href="{{ generate_url('games.games.detail', {'id':item.game_id}) }}" title="Game {{ item.game_id_title }}">
+                                    {{ item.game_id_title }}
+                                </a>
+                            </td>
+                            <td>
+                                {{ item.hit }}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+{% include "items.pagination.twig"%}
+

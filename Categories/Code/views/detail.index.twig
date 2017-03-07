@@ -1,0 +1,27 @@
+{# empty Twig template #}
+{% import "form.macro.twig" as forms %}
+
+{{ set_assets('applications/Games/assets/css/game.css') }}
+
+<h1 class="component-header">{{ item.title }}</h1>
+
+<div class="business-posted-date">
+    <i class="fa fa-clock-o"></i> Posted:  {{ item.date_created|date('d M Y H:i') }} &nbsp;&nbsp;
+</div>
+
+<div>
+    {{ item.description }}
+</div>
+
+<div class="clearfix"></div>
+<div> 
+    <div class="clearfix"></div>
+    <div class="well well-sm"> Games</div>
+    <hr>
+    <div class="game-games-listing">
+        {% include "game.list.twig" ignore missing with {'category_id': item.id,'action': 'latest','limit': '8'}  %}
+    </div>
+    <div class="clearfix"></div>
+    <br>
+</div>
+

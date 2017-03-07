@@ -1,0 +1,9 @@
+{
+    "name": "games",
+    "title": "Games Listing",
+    "icon": "icons\/games.png",
+    "extension": "component",
+    "path": "games\/",
+    "description": "Games Listing",
+    "version": 1
+}

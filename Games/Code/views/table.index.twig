@@ -1,0 +1,32 @@
+{# empty Twig template #}
+
+{{ set_assets('applications/Games/assets/css/game.css') }}
+
+<h1 class="component-header">Games</h1>
+
+<div class="game-list">
+    {% if items|length > 0 %}
+        {% for item in items %}
+            <div class="col-sm-4">
+                <div class=" game">
+                    <a href="{{ generate_url('games.games.detail', {'id': item.id}) }}" title="{{ item.title }}">
+                        <img src="{{ resized_image(item.image_file,90,90) }}" class="avatar" alt="{{ item.title }}" title="{{ item.title }}">
+                    </a>
+                    <a href="{{ generate_url('games.games.detail', {'id': item.id}) }}" title="{{ item.title }}">
+                        {{ item.title }} 
+                    </a>
+                    <div>
+                        <i class="fa fa-sitemap"></i> {{ item.category.title }} 
+                    </div>
+                </div>
+
+            </div>
+
+        {% endfor %}
+    {% endif %}
+</div>
+
+<div class="clearfix"></div>
+
+{% include "items.pagination.twig"%}
+

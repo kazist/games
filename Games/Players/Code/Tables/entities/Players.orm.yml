@@ -1,0 +1,57 @@
+Games\Games\Players\Code\Tables\Players:
+  table: games_games_players
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    user_id:
+      name: user_id
+      type: integer
+      length: 11
+      nullable: false
+    game_id:
+      name: game_id
+      type: integer
+      length: 11
+      nullable: false
+    hit:
+      name: hit
+      type: integer
+      length: 11
+      nullable: false
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: false
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: false
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: false
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: false
+  indexes:
+    user_id_index:
+      columns: [user_id]
+    game_id_index:
+      columns: [game_id]
+    created_by_index:
+      columns: [created_by]
+    modified_by_index:
+      columns: [modified_by]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

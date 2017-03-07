@@ -1,0 +1,123 @@
+Games\Games\Code\Tables\Games:
+  table: games_games
+  type: entity
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields:
+    file_type:
+      name: file_type
+      type: string
+      length: 255
+      nullable: true
+    title:
+      name: title
+      type: string
+      length: 255
+      nullable: true
+    description:
+      name: description
+      type: text
+      nullable: true
+    category_id:
+      name: category_id
+      type: integer
+      length: 11
+      nullable: true
+    image:
+      name: image
+      type: integer
+      length: 11
+      nullable: true
+    fog_id:
+      name: fog_id
+      type: string
+      length: 255
+      nullable: true
+    controls:
+      name: controls
+      type: string
+      length: 255
+      nullable: true
+    date_added:
+      name: date_added
+      type: datetime
+      nullable: true
+    game_url:
+      name: game_url
+      type: string
+      length: 255
+      nullable: true
+    small_thumbnail_url:
+      name: small_thumbnail_url
+      type: string
+      length: 255
+      nullable: true
+    med_thumbnail_url:
+      name: med_thumbnail_url
+      type: string
+      length: 255
+      nullable: true
+    large_thumbnail_url:
+      name: large_thumbnail_url
+      type: string
+      length: 255
+      nullable: true
+    swf_file:
+      name: swf_file
+      type: integer
+      length: 11
+      nullable: true
+    resolution:
+      name: resolution
+      type: string
+      length: 255
+      nullable: true
+    tags:
+      name: tags
+      type: string
+      length: 255
+      nullable: true
+    hit:
+      name: hit
+      type: integer
+      length: 11
+      nullable: true
+    published:
+      name: published
+      type: integer
+      length: 11
+      nullable: true
+    created_by:
+      name: created_by
+      type: integer
+      length: 11
+      nullable: true
+    date_created:
+      name: date_created
+      type: datetime
+      nullable: true
+    modified_by:
+      name: modified_by
+      type: integer
+      length: 11
+      nullable: true
+    date_modified:
+      name: date_modified
+      type: datetime
+      nullable: true
+  indexes:
+    category_id_index:
+      columns: [category_id]
+    created_by_index:
+      columns: [created_by]
+    modified_by_index:
+      columns: [modified_by]
+  lifecycleCallbacks:
+    prePersist:
+      - onPrePersist
+      - onPrePersistCallbacks
+    preUpdate:
+      - onPreUpdate
+      - onPreUpdateCallbacks

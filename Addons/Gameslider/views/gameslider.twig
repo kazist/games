@@ -1,0 +1,59 @@
+
+{{ set_assets('applications/Games/Addons/Gameslider/assets/css/style.css') }}
+
+<div class="gameslider-slider" >
+    <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="item active">
+
+                {% if games|length > 0 %}
+                    {%for key,game in games %}
+
+                        {% set game_url= generate_url('games.games.detail', {'id':game.id}) %}
+
+                        <div class="col-sm-3 gameslider-game">
+                            <div class="col-item">
+
+                                <div class="photo">
+                                    <a href="{{ game_url }}" title="{{ game.title }}">
+                                        <img src="{{ resized_image(game.image_file,300,300) }}" class="img-responsive" alt="{{ game.title }}" title="{{ game.title }}" />
+                                    </a>
+                                </div>
+
+                                <div class="info">
+                                    <p>
+                                        <a href="{{ game_url }}" title='{{ game.title }}'>{{ game.title|truncate(15) }}</a>
+                                    </p>
+                                    <div class="clearfix">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% if not (key+1)%4 and (key+1) != games|length %}
+                            {{ '</div>' }}
+                            {{ '<div class="item">' }}
+                        {% endif %}
+
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Controls -->
+        <div class="controls pull-right hidden-xs">
+            <a class="left fa fa-chevron-left " href="#carousel-example"
+               data-slide="prev" title='Previous'></a><a class="right fa fa-chevron-right " href="#carousel-example"
+               data-slide="next" title='Next'></a>
+        </div>
+    </div>
+
+</div>
+
+
+

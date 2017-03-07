@@ -1,0 +1,40 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 15, 2015, 10:04:41 AM
+    Author     : sbc
+*/
+.game-category-list .game-category{
+    padding:5px;
+    border:1px solid #ddd;
+    margin-bottom:10px;
+}
+
+.game-category-list .game-category > img{
+    border:1px solid #ddd;
+    margin:5px;
+}
+
+.game-category-list .game-category .category-games  img{
+    width:100%;
+}
+
+.game-list .game{
+    padding:5px;
+    border:1px solid #ddd;
+    margin-bottom:10px;
+}
+
+.game-list .game img{
+    width:100%;
+}
+
+.single-game, .single-game object{
+    width:100%;
+    height: 450px;
+}
+
+

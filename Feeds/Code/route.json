@@ -1,0 +1,123 @@
+{
+    "backend": [{
+            "title": "General Tasks",
+            "description": "General Tasks.",
+            "controller": "Games\\Feeds\\Code\\Controllers\\Admin\\FeedsController::taskAction",
+            "unique_name": "admin.games.feeds.task",
+            "route": "admin/games/feeds/task",
+            "permissions": "can_write",
+            "arguments": "",
+            "keywords": "feeds, task",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_write"],
+                "ADMIN": ["can_write"]
+            }
+        }, {
+            "title": "Feed List",
+            "description": "Management of Feeds.",
+            "controller": "Games\\Feeds\\Code\\Controllers\\Admin\\FeedsController::indexAction",
+            "permissions": "can_view, can_viewown",
+            "unique_name": "admin.games.feeds",
+            "route": "admin/games/feeds",
+            "arguments": "",
+            "keywords": "feed, list",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Add Feed ",
+            "description": "Add Feed  .",
+            "controller": "Games\\Feeds\\Code\\Controllers\\Admin\\FeedsController::addAction",
+            "unique_name": "admin.games.feeds.add",
+            "route": "admin/games/feeds/add",
+            "permissions": "can_add",
+            "arguments": {},
+            "keywords": "feed, add",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add"],
+                "ADMIN": ["can_add"]
+            }
+        }, {
+            "title": "Edit Feed ",
+            "description": "Edit Feed  .",
+            "controller": "Games\\Feeds\\Code\\Controllers\\Admin\\FeedsController::addAction",
+            "unique_name": "admin.games.feeds.edit",
+            "route": "admin/games/feeds/edit/{id}",
+            "permissions": "can_add, can_write, can_writeown ",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "feed, edit",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }, {
+            "title": "Feed Detail: {{ item.name }}",
+            "description": "Feed Detail: {{ item.name }}",
+            "controller": "Games\\Feeds\\Code\\Controllers\\Admin\\FeedsController::detailAction",
+            "unique_name": "admin.games.feeds.detail",
+            "route": "admin/games/feeds/detail/{id}",
+            "permissions": "can_view, can_viewown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "feed, list, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_view", "can_viewown"],
+                "ADMIN": ["can_view", "can_viewown"]
+            }
+        }, {
+            "title": "Feed Delete: {{ item.name }}",
+            "description": "Feed Delete: {{ item.name }}",
+            "controller": "Games\\Feeds\\Code\\Controllers\\Admin\\FeedsController::deleteAction",
+            "unique_name": "admin.games.feeds.delete",
+            "route": "admin/games/feeds/delete/{id}",
+            "permissions": "can_delete, can_deleteown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "feed, delete, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_delete", "can_deleteown"],
+                "ADMIN": ["can_delete", "can_deleteown"]
+            }
+        }, {
+            "title": "Feed Save: {{ item.name }}",
+            "description": "Feed Save: {{ item.name }}",
+            "controller": "Games\\Feeds\\Code\\Controllers\\Admin\\FeedsController::saveAction",
+            "unique_name": "admin.games.feeds.save",
+            "route": "admin/games/feeds/save",
+            "permissions": "can_add, can_write, can_writeown",
+            "arguments": {
+                "id": null
+            },
+            "keywords": "feed, save, {{ item.name }}",
+            "priority": "0.5",
+            "changefreq": "weekly",
+            "login_required": 1,
+            "roles": {
+                "SUPER_ADMIN": ["can_add", "can_write", "can_writeown"],
+                "ADMIN": ["can_add", "can_write", "can_writeown"]
+            }
+        }]
+} 	

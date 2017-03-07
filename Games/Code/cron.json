@@ -1,0 +1,17 @@
+
+[{
+        "tracking_id": "1",
+        "controller": "Games\\Games\\Code\\Controllers\\GamesController",
+        "function": "fetchgamecronAction",
+        "unique_name": "games.games.fetchgamecron",
+        "minute": "0",
+        "hour": "0",
+        "day_of_month": "*",
+        "month": "*",
+        "day_of_week": "*",
+        "year": "*",
+        "next_run_time": "",
+        "published": 0
+    }]
+
+

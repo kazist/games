@@ -1,0 +1,18 @@
+{
+    "GamesCategories": {
+        "namespace": "Games\\Categories",
+        "controller": "CategoriesController"
+    },
+    "GamesFeeds": {
+        "namespace": "Games\\Feeds",
+        "controller": "FeedsController"
+    },
+    "GamesGames": {
+        "namespace": "Games\\Games",
+        "controller": "GamesController"
+    },
+    "GamesGamesPlayers": {
+        "namespace": "Games\\Games\\Players",
+        "controller": "PlayersController"
+    }
+}

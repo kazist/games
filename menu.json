@@ -1,0 +1,24 @@
+{
+    "title": "Games",
+    "description": "Games",
+    "alias": "games",
+    "icon": "fa-picture-o",
+    "home_link": "games\/games",
+    "is_core": "1",
+    "menulist": [{
+            "title": "Games",
+            "alias": "admin_games_games",
+            "url": "admin/games/games",
+            "children": []
+        }, {
+            "title": "Categories",
+            "alias": "admin_games_categories",
+            "url": "admin/games/categories",
+            "children": []
+        }, {
+            "title": "Feeds",
+            "alias": "admin_games_feeds",
+            "url": "admin/games/feeds",
+            "children": []
+        }]
+}

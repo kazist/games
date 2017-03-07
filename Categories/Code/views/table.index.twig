@@ -1,0 +1,63 @@
+{# empty Twig template #}
+
+{{ set_assets('applications/Games/assets/css/game.css') }}
+
+<h1 class="component-header">Games Category</h1>
+
+<div class="game-category-list">
+    {% if items|length > 0 %}
+        {% for item in items %}
+            <div class="col-sm-4">
+                <div class=" game-category">
+
+                    <a href="{{ generate_url('game.categories.detail', {'id': item.id}) }}"title="{{ item.title }}">
+                        <img src="{{ resized_image(item.media.file,48,48) }}" class="avatar" alt="{{ item.title }}" title="{{ item.title }}" align="left">
+                    </a>
+
+                    <a href="{{ generate_url('game.categories.detail', {'id': item.id}) }}" title="{{ item.title }}">
+                        {{ item.title }} 
+                    </a>
+
+                    <div>
+                        <i class="fa fa-gamepad"></i> Total Games({{ item.total_games }})
+                    </div>
+                    <hr>
+
+                    <div class="clearfix"></div>
+                    <div class="category-games">
+                        {% if item.games|length > 0 %}
+                            {% for game in item.games %}
+                                <div class="col-sm-6">
+                                    <a href="{{ generate_url('games.games.detail', {'id': game.id}) }}" title="{{ game.title }} ">
+                                        {{ game.title }} 
+                                    </a>
+
+                                    <a href="{{ generate_url('games.games.detail', {'id': game.id}) }}"title="{{ game.title }}">
+                                        <img src="{{ resized_image(game.media.file,48,48) }}" class="avatar" alt="{{ game.title }}" title="{{ game.title }}" align="left">
+                                    </a>
+
+
+                                </div>
+
+                            {% endfor %}
+                        {% endif %}
+
+                    </div>
+                    <div class="clearfix"></div>
+
+                    <a class="btn btn-success btn-xs btn-flat" href="{{ generate_url('game.categories.detail', {'id': item.id}) }}" title="View Category">
+                        View Category
+                    </a>
+                    <div class="clearfix"></div>
+
+                </div>
+            </div>
+
+        {% endfor %}
+    {% endif %}
+</div>
+
+<div class="clearfix"></div>
+
+{% include "items.pagination.twig"%}
+
