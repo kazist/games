@@ -1,9 +1,9 @@
 {
-    "name": "games",
+    "name": "kazist/games",
     "title": "Games Listing",
     "icon": "icons\/games.png",
     "extension": "component",
-    "path": "games\/",
+    "path": "applications/Games/",
     "description": "Games Listing",
     "version": 1
 }
