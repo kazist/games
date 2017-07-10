@@ -2,23 +2,26 @@
     "title": "Games",
     "description": "Games",
     "alias": "games",
-    "icon": "fa-picture-o",
+    "icon": "fa fa-gamepad",
     "home_link": "games\/games",
     "is_core": "1",
     "menulist": [{
             "title": "Games",
             "alias": "admin_games_games",
             "url": "admin/games/games",
+            "icon": "fa fa-gamepad",
             "children": []
         }, {
             "title": "Categories",
             "alias": "admin_games_categories",
             "url": "admin/games/categories",
+            "icon": "fa fa-navicon",
             "children": []
         }, {
             "title": "Feeds",
             "alias": "admin_games_feeds",
             "url": "admin/games/feeds",
+            "icon": "fa fa-rss",
             "children": []
         }]
 }
