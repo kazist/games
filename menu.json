@@ -4,6 +4,7 @@
     "alias": "games",
     "icon": "fa fa-gamepad",
     "home_link": "games\/games",
+    "path": "applications/Games",
     "is_core": "1",
     "menulist": [{
             "title": "Games",
